@@ -1,6 +1,5 @@
 import express from "express";
 import colors from "colors";
-import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
@@ -9,7 +8,8 @@ import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import dotenv from 'dotenv';
+dotenv.config();
 // __dirname सेट करें
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
